@@ -60,6 +60,8 @@
   <ItemGroup>
     <Compile Include="AbbrTests.cs" />
     <Compile Include="ElementTests.cs" />
+    <Compile Include="FromDocumentTestBase.cs" />
+    <Compile Include="MergeTableTests.cs" />
     <Compile Include="HrTests.cs" />
     <Compile Include="HtmlConverterTestBase.cs" />
     <Compile Include="ImgTests.cs" />
@@ -80,6 +82,9 @@
       <Project>{0e3842fb-1064-4a95-8fd0-b70d3daee7b6}</Project>
       <Name>html2openxml</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\TableMerge.html" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
