@@ -18,5 +18,35 @@ namespace HtmlToOpenXml.Tests
             // Act
             Check(html);
         }
+
+        [Test]
+        public void ParseTableMergeSimple()
+        {
+            // Arrange
+            var html = File.ReadAllText(@"D:\ProjetsGit\html2openxml_mec\html2openxml\html2openxml.test\Resources\TableMergeSimple.html");
+
+            // Act
+            Check(html);
+        }
+
+        [Test]
+        public void ParseTableMergeDouble()
+        {
+            // Arrange
+            var html = File.ReadAllText(@"D:\ProjetsGit\html2openxml_mec\html2openxml\html2openxml.test\Resources\TableMergeDouble.html");
+
+            // Act
+            Check(html);
+        }
+
+        [Test]
+        public void ParseTableMergeRight()
+        {
+            // Arrange
+            var html = File.ReadAllText(@"D:\ProjetsGit\html2openxml_mec\html2openxml\html2openxml.test\Resources\TableMergeRight.html");
+
+            // Act
+            Check(html);
+        }
     }
 }
