@@ -1369,23 +1369,10 @@ namespace HtmlToOpenXml
                     // in case of both colSpan + rowSpan on the same cell, we have to reverberate the rowSpan on the next columns too
                     if (tspan.ColSpan > 0) emptyCell.TableCellProperties.GridSpan = new GridSpan() { Val = tspan.ColSpan };
 
-                    TableCell cell = row.GetFirstChild<TableCell>();
-                    if (tspan.CellOrigin.Column == 0 || cell == null)
-                    {
-                        row.InsertAt(emptyCell, 0);
-                        continue;
-                    }
+                    var rowSpanColumn = tspan.CellOrigin.Column;
+                    var emptyCellColumn = Math.Min(rowSpanColumn, row.Count()); // Handle missing cells
 
-                    // find the good column position, taking care of eventual colSpan
-                    var currentTotalColSpan = 0;
-                    foreach (TableCell tmp in row.Elements<TableCell>())
-                    {
-                        currentTotalColSpan += tmp.TableCellProperties?.GridSpan?.Val ?? 1;
-                    }
-
-
-                    if (cell == null) row.AppendChild(emptyCell);
-                    else row.InsertAt(emptyCell, currentTotalColSpan);
+                    row.InsertAt(emptyCell, emptyCellColumn);
                 }
             }
 

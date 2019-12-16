@@ -85,6 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\TableMerge.html" />
+    <Content Include="Resources\TableMergeDouble.html" />
+    <Content Include="Resources\TableMergeRight.html" />
+    <Content Include="Resources\TableMergeSimple.html" />
+    <Content Include="Resources\TableMergeV1.html" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

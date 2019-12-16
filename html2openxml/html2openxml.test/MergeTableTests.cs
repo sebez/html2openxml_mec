@@ -48,5 +48,15 @@ namespace HtmlToOpenXml.Tests
             // Act
             Check(html);
         }
+
+        [Test]
+        public void ParseTableMergeV1()
+        {
+            // Arrange
+            var html = File.ReadAllText(@"D:\ProjetsGit\html2openxml_mec\html2openxml\html2openxml.test\Resources\TableMergeV1.html");
+
+            // Act
+            Check(html);
+        }
     }
 }
